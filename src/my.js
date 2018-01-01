@@ -5,7 +5,7 @@ let colors = [
 	"cornflowerblue",
 	"darkcyan",
 	"dimgrey",
-	"dodgerblue",
+	//"dodgerblue", too close to twitter blue
 	"forestgreen",
 	"indigo",
 	"royalblue",
@@ -21,8 +21,12 @@ function genColor(){
 
 function addQuote(quote){
 	quote["color"] = genColor();
+	quote["link"] = "https://bit.ly/2lwfOfF";
+
 	let container = document.querySelector('main');
 	container.innerHTML += tmpl("quote_tmpl",quote);
+
+	twttr.widgets.load(document.querySelector(".full-screen:last-child>.wrapper"));
 }
 
 function randomQuote(){
