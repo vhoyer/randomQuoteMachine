@@ -1,21 +1,20 @@
-let i = 0;
+let colors = [
+	"blueviolet",
+	"brown",
+	"cadetblue",
+	"cornflowerblue",
+	"darkcyan",
+	"dimgrey",
+	"dodgerblue",
+	"forestgreen",
+	"indigo",
+	"royalblue",
+	"seagreen",
+	"steelblue",
+	"tomato"
+];
+let i = Math.random() * colors.length>>0;;
 function genColor(){
-	let colors = [
-		"blueviolet",
-		"brown",
-		"cadetblue",
-		"cornflowerblue",
-		"darkcyan",
-		"dimgrey",
-		"dodgerblue",
-		"forestgreen",
-		"indigo",
-		"orangered",
-		"royalblue",
-		"seagreen",
-		"steelblue",
-		"tomato"
-	];
 	if (i>=colors.length){i=0;}
 	return colors[i++];
 }
